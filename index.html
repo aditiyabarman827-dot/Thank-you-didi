@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Lovely Didi ❤️</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: sans-serif;
+    text-align: center;
+    color: white;
+    background: radial-gradient(circle, #48245c, #10051c);
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 35px 15px;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #ffd6e7;
+    font-size: 27px;
+    margin-top: 40px;
+}
+
+.subtitle {
+    color: #ffe4f0;
+    font-size: 17px;
+}
+
+.gift {
+    width: 150px;
+    height: 120px;
+    background: #ff4f91;
+    margin: 100px auto 20px;
+    position: relative;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 35px #ff69a4;
+}
+
+.gift::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 120px;
+    background: #ffe28a;
+    left: 62px;
+}
+
+.lid {
+    position: absolute;
+    width: 170px;
+    height: 30px;
+    background: #ff8bb7;
+    left: -10px;
+    top: -30px;
+    border-radius: 8px;
+    transition: 1s;
+}
+
+.gift.open .lid {
+    transform: translateY(-65px) rotate(-15deg);
+}
+
+.ribbon {
+    position: absolute;
+    width: 55px;
+    height: 35px;
+    border: 8px solid #ffe28a;
+    border-radius: 50%;
+    left: 47px;
+    top: -55px;
+}
+
+button {
+    background: #ff8bb7;
+    color: #48152d;
+    border: none;
+    border-radius: 25px;
+    padding: 13px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.poem {
+    display: none;
+    margin: 35px auto;
+    padding: 25px 15px;
+    max-width: 500px;
+    background: #ffffff18;
+    border: 1px solid pink;
+    border-radius: 20px;
+    line-height: 2;
+    animation: appear 1s;
+}
+
+.poem.show {
+    display: block;
+}
+
+.poem h2 {
+    color: #ffd6e7;
+}
+
+.final {
+    color: #ffb6d5;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    animation: floatUp 6s linear forwards;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🌸 আমার প্রিয় দিদির জন্য 🌸</h1>
+
+<p class="subtitle">
+তোমার জন্য ছোট্ট একটা সারপ্রাইজ ❤️
+</p>
+
+<div class="gift" id="gift" onclick="openGift()">
+    <div class="lid"></div>
+    <div class="ribbon"></div>
+</div>
+
+<button onclick="openGift()">🎁 Open Your Gift</button>
+
+<div class="poem" id="poem">
+
+<h2>❤️ প্রিয় দিদি ❤️</h2>
+
+<p>
+হাজার মানুষের ভিড়ে তুমি,<br>
+আমার সবচেয়ে আপন।<br>
+ঝগড়া আর অভিমানের মাঝেও,<br>
+তুমিই আমার আপনজন। 🌸
+</p>
+
+<p>
+কখনও বকো, কখনও হাসো,<br>
+কখনও করো রাগ।<br>
+তোমার সঙ্গে কাটানো মুহূর্ত,<br>
+জীবনের সেরা ভাগ। 💗
+</p>
+
+<p>
+সময় যাবে, দিনও বদলাবে,<br>
+বদলাবে চারপাশ।<br>
+তবুও তোমার জন্য থাকবে,<br>
+ভালোবাসা অফুরান। ❤️
+</p>
+
+<p>
+হয়তো মুখে বলি না কখনও,<br>
+কতটা ভালোবাসি।<br>
+তুমি পাশে থাকলে দিদি,<br>
+সব কষ্ট ভুলে হাসি। 🥹
+</p>
+
+<p>
+আর যদি জন্ম আবার হয়,<br>
+একটাই প্রার্থনা করি।<br>
+আবার যেন তোমারই ছোট ভাই হয়ে,<br>
+এই পৃথিবীতে আসতে পারি। ❤️
+</p>
+
+<p class="final">
+তুমি শুধু আমার দিদি নও,<br>
+তুমি আমার জীবনের এক টুকরো স্বর্গ। 🌷
+</p>
+
+<h3>ইতি, তোমার আদরের ছোট ভাই। ❤️</h3>
+
+</div>
+</div>
+
+<script>
+
+function openGift() {
+
+    document.getElementById("gift").classList.add("open");
+
+    document.getElementById("poem").classList.add("show");
+
+    document.querySelector("button").style.display = "none";
+
+    for (let i = 0; i < 25; i++) {
+
+        let heart = document.createElement("div");
+
+        heart.className = "heart";
+        heart.innerHTML = "❤️";
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDelay = Math.random() * 3 + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 7000);
+    }
+}
+
+</script>
+
+</body>
+  </html>
